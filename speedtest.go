@@ -113,7 +113,7 @@ func testUpload(server *speedtest.Server, savingMode bool) error {
 	quit := make(chan bool)
 	fmt.Printf("Upload Test: ")
 	go dots(quit)
-	err := server.UploadTest(savingMode)
+	err := server.UploadTest(true)
 	quit <- true
 	if err != nil {
 		return err
